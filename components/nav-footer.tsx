@@ -29,7 +29,7 @@ function NavFooter() {
                                 href={process.env.NEXT_PUBLIC_DOCS_ENDPOINT}
                                 text="Documentation"
                             />
-                            {/* <NavFooterLink href="/changelog" text="Changelog" /> */}
+                            <NavFooterLink href="/claim" text="Claim" />
                         </ul>
                     </li>
                     <li className="mb-6 md:mb-0">

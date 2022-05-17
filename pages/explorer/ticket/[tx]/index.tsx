@@ -44,8 +44,7 @@ const ExplorerTicketDetailPage = () => {
                         >
                             <div className="p-4 md:p-12 text-center lg:text-left">
                                 <h1 className="text-3xl font-bold pt-8 lg:pt-0">
-                                    {ticket.data.ticket.event.name} #
-                                    {ticket.data.ticket.refTicketId}
+                                    {ticket.data.ticket.name}
                                 </h1>
                                 <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
                                 <p className="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
@@ -80,9 +79,28 @@ const ExplorerTicketDetailPage = () => {
                                             d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                                         />
                                     </svg>
-                                    {moment(
-                                        ticket.data.ticket.orderTime
-                                    ).format("LLL")}
+                                    {moment
+                                        .unix(+ticket.data.ticket.mintTime)
+                                        .format("LLL")}
+                                </p>
+                                <p className="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5 mr-3"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"
+                                        />
+                                    </svg>
+                                    {ticket.data.ticket.amountClaimed}/
+                                    {ticket.data.ticket.amountTotal}
+                                    total supply
                                 </p>
                                 <p className="pt-8 text-sm">
                                     {ticket.data.ticket.description}

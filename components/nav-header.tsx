@@ -41,6 +41,7 @@ function NavHeader() {
                 </div>
                 <div className="items-center hidden md:flex">
                     <ul className="flex">
+                        <NavHeaderLink href="/claim" text="Claim" />
                         <NavHeaderLink href="/explorer" text="Explorer" />
                         <NavHeaderLink href="/#token" text="Token" />
                         <NavHeaderLink
@@ -62,6 +63,11 @@ function NavHeader() {
                     <div className="relative h-screen">
                         <div className="absolute flex w-full pb-10 bg-pir-beige">
                             <ul className="flex flex-col w-full -mt-4">
+                                <NavHeaderLink
+                                    href="/claim"
+                                    text="Claim"
+                                    isMobile
+                                />
                                 <NavHeaderLink
                                     href="/explorer"
                                     text="Explorer"

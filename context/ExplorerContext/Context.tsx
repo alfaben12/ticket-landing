@@ -7,9 +7,11 @@ import { ExplorerContextType } from "./Type";
 const ExplorerContext = createContext<ExplorerContextType>({
     isLoading: false,
     ticket: null,
+    ticketClaim: null,
     event: null,
     getEventByTx: (tx: string) => {},
     getTicketByTx: (tx: string) => {},
+    getTicketClaimByTx: (tx: string) => {},
     resetState: () => {},
 });
 
@@ -17,6 +19,7 @@ export const ExplorerProvider = ({ children }: any) => {
     const [isLoading, setIsLoading] = useState(false);
     const [event, setEvent] = useState(null);
     const [ticket, setTicket] = useState(null);
+    const [ticketClaim, setTicketClaim] = useState(null);
 
     const getEventByTx = async (tx: string) => {
         setIsLoading(true);
@@ -48,6 +51,21 @@ export const ExplorerProvider = ({ children }: any) => {
         }
     };
 
+    const getTicketClaimByTx = async (tx: string) => {
+        setIsLoading(true);
+        try {
+            const { data }: AxiosResponse<any> = await api.get(
+                `/tx/claim/${tx}`
+            );
+
+            setTicketClaim(data);
+            setIsLoading(false);
+        } catch (error: any) {
+            setTicketClaim(error.response.data);
+            setIsLoading(false);
+        }
+    };
+
     const resetState = async () => {
         setTicket(null);
         setEvent(null);
@@ -59,8 +77,10 @@ export const ExplorerProvider = ({ children }: any) => {
                 isLoading,
                 ticket,
                 event,
+                ticketClaim,
                 getTicketByTx,
                 getEventByTx,
+                getTicketClaimByTx,
                 resetState,
             }}
         >

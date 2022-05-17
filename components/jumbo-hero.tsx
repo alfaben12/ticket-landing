@@ -14,10 +14,7 @@ function JumboHero() {
             </p>
 
             <div className="flex justify-center mt-8 md:mt-12">
-                <PrimaryButton
-                    href={`${process.env.NEXT_PUBLIC_DASH_ENDPOINT}/signin`}
-                    text="Try it for Free"
-                />
+                <PrimaryButton href={`/claim`} text="Claim Yours" />
                 <SecondaryButton href="/explorer" text="Explorer" />
             </div>
             <p className="mt-3 text-center text-pir-gray-500">
