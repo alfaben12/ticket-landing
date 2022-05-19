@@ -1,6 +1,5 @@
 import { AxiosResponse } from "axios";
 import { createContext, useContext, useState } from "react";
-import createPersistedState from "use-persisted-state";
 import api from "../../utils/api";
 import { ExplorerContextType } from "./Type";
 
@@ -9,9 +8,11 @@ const ExplorerContext = createContext<ExplorerContextType>({
     ticket: null,
     ticketClaim: null,
     event: null,
+    claimed: null,
     getEventByTx: (tx: string) => {},
     getTicketByTx: (tx: string) => {},
     getTicketClaimByTx: (tx: string) => {},
+    claimTicket: (body: any) => {},
     resetState: () => {},
 });
 
@@ -20,6 +21,7 @@ export const ExplorerProvider = ({ children }: any) => {
     const [event, setEvent] = useState(null);
     const [ticket, setTicket] = useState(null);
     const [ticketClaim, setTicketClaim] = useState(null);
+    const [claimed, setClaimed] = useState(null);
 
     const getEventByTx = async (tx: string) => {
         setIsLoading(true);
@@ -66,6 +68,22 @@ export const ExplorerProvider = ({ children }: any) => {
         }
     };
 
+    const claimTicket = async (body: any) => {
+        setIsLoading(true);
+        try {
+            const { data }: AxiosResponse<any> = await api.post(
+                `/direct-claims`,
+                body
+            );
+
+            setClaimed(data);
+            setIsLoading(false);
+        } catch (error: any) {
+            setClaimed(error.response.data);
+            setIsLoading(false);
+        }
+    };
+
     const resetState = async () => {
         setTicket(null);
         setEvent(null);
@@ -77,10 +95,12 @@ export const ExplorerProvider = ({ children }: any) => {
                 isLoading,
                 ticket,
                 event,
+                claimed,
                 ticketClaim,
                 getTicketByTx,
                 getEventByTx,
                 getTicketClaimByTx,
+                claimTicket,
                 resetState,
             }}
         >

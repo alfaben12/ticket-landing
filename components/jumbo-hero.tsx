@@ -5,7 +5,7 @@ function JumboHero() {
     return (
         <div className="max-w-screen-md py-8 mx-auto md:text-center md:py-28">
             <h1 className="text-4xl font-semibold leading-tight text-black md:text-6xl lg:text-8xl">
-                Twins Ticket You Can Get.
+                The Twin You Can Get.
             </h1>
             <p className="text-lg md:text-[1.375rem] leading-normal mt-6 md:mt-9 text-pir-gray-500">
                 Tingkatkan tiket Anda dengan mudah, NFT adalah bentuk teknologi
