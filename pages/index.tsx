@@ -69,7 +69,7 @@ const Home: NextPage = () => {
                         </div>
                         <div className="p-8">
                             <div className="tracking-wide text-lg text-pir-green font-semibold">
-                                getTwinTicket (GTIC)
+                                getTwin (TWIN)
                             </div>
                             <span className="block mt-1 text-sm leading-tight font-medium text-black hover:underline truncate">
                                 {process.env.NEXT_PUBLIC_TICKET_CONTRACT}
