@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 />
                 <meta
                     name="description"
-                    content="Tingkatkan tiket Anda dengan mudah, NFT adalah bentuk teknologi revolusioner yang membuka peluang besar bagi penerbit tiket di seluruh dunia. Ya, juga untukmu."
+                    content="Tingkatkan tiket Kamu dengan mudah, NFT adalah bentuk teknologi revolusioner yang membuka peluang besar bagi penerbit tiket di seluruh dunia. Ya, juga untukmu."
                 />
             </Head>
             <AuthProvider>

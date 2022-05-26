@@ -85,6 +85,7 @@ export const ExplorerProvider = ({ children }: any) => {
     };
 
     const resetState = async () => {
+        setClaimed(null);
         setTicket(null);
         setEvent(null);
     };

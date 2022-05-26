@@ -8,7 +8,7 @@ function JumboHero() {
                 The Twin You Can Get.
             </h1>
             <p className="text-lg md:text-[1.375rem] leading-normal mt-6 md:mt-9 text-pir-gray-500">
-                Tingkatkan tiket Anda dengan mudah, NFT adalah bentuk teknologi
+                Tingkatkan tiket Kamu dengan mudah, NFT adalah bentuk teknologi
                 revolusioner yang membuka peluang besar bagi penerbit tiket di
                 seluruh dunia. Ya, juga untukmu.
             </p>

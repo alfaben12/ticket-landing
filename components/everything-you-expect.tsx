@@ -15,8 +15,8 @@ function EverythingYouExpect() {
                             Powerful Technology for Your Assets
                         </h4>
                         <p className="mt-5 text-lg lg:text-[1.375rem] leading-normal text-pir-gray-500">
-                            Tiket NFT Anda dapat memiliki fasilitas unik, yang
-                            dibuat khusus untuk acara Anda.
+                            Tiket NFT Kamu dapat memiliki fasilitas unik, yang
+                            dibuat khusus untuk acara Kamu.
                         </p>
                         <p className="mt-5 text-lg lg:text-[1.375rem] leading-normal text-pir-gray-500">
                             Selain barang fisik, pelanggan dapat membeli gambar
@@ -59,7 +59,7 @@ function EverythingYouExpect() {
                             NFT (non-fungible token) adalah catatan digital unik
                             yang tidak dapat diubah atau diubah.Mereka mewakili
                             aset fisik atau digital (pada dasarnya item apa pun
-                            yang dapat Anda bayangkan, seperti sepasang snicker,
+                            yang dapat Kamu bayangkan, seperti sepasang snicker,
                             tiket acara, lagu, video, dll.) dan menyimpan bukti
                             seluruh sejarah item tersebut.
                         </p>

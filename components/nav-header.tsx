@@ -5,6 +5,7 @@ import MenuIcon from "./menu-icon";
 import { useState } from "react";
 import CloseIcon from "./close-icon";
 import PrimaryButton from "./primary-button";
+import Image from "next/image";
 
 function NavHeader() {
     const [showMenu, setShowMenu] = useState(false);
@@ -19,10 +20,13 @@ function NavHeader() {
                 <div>
                     <Link href="/">
                         <a className="flex items-center">
-                            <BrandLogo className="w-5 h-7" />
-                            <span className="ml-1.5 text-[1.375rem] font-medium tracking-tight">
-                                Pirsch
-                            </span>
+                            {/* <BrandLogo className="w-5 h-7" /> */}
+                            <Image
+                                src="/images/logo.svg"
+                                width={120}
+                                height={30}
+                                alt="Get Twin"
+                            />
                         </a>
                     </Link>
                 </div>
@@ -60,9 +64,7 @@ function NavHeader() {
 
             <div className="md:hidden">
                 {showMenu && (
-                    <div className="
-                    
-                    relative h-screen">
+                    <div className="relative h-screen">
                         <div className="absolute flex w-full pb-10 bg-pir-beige">
                             <ul className="flex flex-col w-full -mt-4">
                                 <NavHeaderLink

@@ -21,17 +21,17 @@ function ProductClients() {
             </li>
             <li className="flex items-center justify-center order-2 col-span-2 px-12 py-24 bg-black lg:px-0 rounded-xl">
                 <Image
-                    src="https://pirsch.io/static/img/wordpress.svg"
-                    width={384}
-                    height={87}
-                    alt="GET Twin"
+                    src="/images/your-platform.svg"
+                    width={450}
+                    height={80}
+                    alt="Your Platform"
                 />
             </li>
             <li className="flex items-center justify-center order-4 col-span-2 px-12 py-24 bg-black lg:px-0 lg:order-3 rounded-xl">
                 <Image
-                    src="https://pirsch.io/static/img/googlesearchconsole.svg"
-                    width={384}
-                    height={41}
+                    src="/images/polygon-white.svg"
+                    width={450}
+                    height={80}
                     alt="Polygon Network"
                 />
             </li>

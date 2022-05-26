@@ -17,8 +17,8 @@ function NavFooter() {
                     <li className="mb-6 md:mb-0">
                         <h6 className="mb-3 text-xl font-medium">Product</h6>
                         <ul>
-                            <NavFooterLink href="/#token" text="Event NFT" />
-                            <NavFooterLink href="/#token" text="Ticket NFT" />
+                            <NavFooterLink href="/#token" text="Event Token" />
+                            <NavFooterLink href="/#token" text="Ticket Token" />
                             <NavFooterLink href="/explorer" text="Explorer" />
                         </ul>
                     </li>
@@ -30,6 +30,7 @@ function NavFooter() {
                                 text="Documentation"
                             />
                             <NavFooterLink href="/claim" text="Claim" />
+                            {/* <NavFooterLink href="/event" text="Event" /> */}
                         </ul>
                     </li>
                     <li className="mb-6 md:mb-0">

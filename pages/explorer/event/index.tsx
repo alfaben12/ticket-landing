@@ -24,10 +24,10 @@ const ExplorerEventPage = () => {
                     onSubmit={findTx}
                 >
                     <Image
-                        src="/logo.png"
-                        width={100}
-                        height={100}
-                        alt="Search Engine"
+                        src="/images/logo/logo-text.svg"
+                        width={420}
+                        height={122}
+                        alt="Get Twin"
                     />
                     <div className="flex w-full mt-5 shadow-lg focus-within:shadow-lg max-w-md rounded-full border border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
                         <svg
@@ -55,7 +55,7 @@ const ExplorerEventPage = () => {
 
                     <div className="flex flex-col w-full space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4">
                         <button className="px-4 py-1.5 rounded-lg bg-pir-green hover:bg-pir-green-hover text-black font-medium transitions-colors duration-200">
-                            Find Transaction
+                            Find Event
                         </button>
                     </div>
                 </form>

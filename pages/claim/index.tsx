@@ -28,7 +28,7 @@ const ClaimPage = () => {
             code,
             address,
             email,
-            note,
+            description: note,
             claimTime: +new Date(),
         };
         claimTicket(body);
@@ -38,6 +38,7 @@ const ClaimPage = () => {
         if (claimed !== null) {
             if ([200, 201].includes(claimed.status)) {
                 setTimeout(() => {
+                    resetState();
                     router.push("/");
                 }, 5000);
             }
@@ -78,7 +79,7 @@ const ClaimPage = () => {
                             </h2>
 
                             <p className="mt-3 text-gray-500">
-                                Isikan data dengan benar dan sesuai!
+                                Isikan data dengan benar dan sesuai.
                             </p>
                         </div>
 
@@ -106,7 +107,7 @@ const ClaimPage = () => {
                                                 <div>
                                                     {claimed.message}
                                                     <br />
-                                                    Weil redirect in 5 second.
+                                                    Will redirect in 5 second.
                                                 </div>
                                             </div>
                                         ) : (
