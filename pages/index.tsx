@@ -44,7 +44,7 @@ const Home: NextPage = () => {
                         </div>
                         <div className="p-8">
                             <div className="tracking-wide text-lg text-pir-green font-semibold">
-                                getTwinEvent (GTEV)
+                                Get Twin Event (GTEV)
                             </div>
                             <span className="block mt-1 text-sm leading-tight font-medium text-black hover:underline truncate">
                                 {process.env.NEXT_PUBLIC_EVENT_CONTRACT}
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
                         </div>
                         <div className="p-8">
                             <div className="tracking-wide text-lg text-pir-green font-semibold">
-                                getTwin (TWIN)
+                                Get Twin (TWIN)
                             </div>
                             <span className="block mt-1 text-sm leading-tight font-medium text-black hover:underline truncate">
                                 {process.env.NEXT_PUBLIC_TICKET_CONTRACT}
