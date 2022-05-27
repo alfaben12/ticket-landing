@@ -1,5 +1,4 @@
 import type { AppProps } from "next/app";
-import { AuthProvider } from "../context/AuthContext/Context";
 import Head from "next/head";
 import "../styles/globals.css";
 import { ExplorerProvider } from "../context/ExplorerContext/Context";
@@ -18,13 +17,11 @@ function MyApp({ Component, pageProps }: AppProps) {
                     content="Tingkatkan tiket Kamu dengan mudah, NFT adalah bentuk teknologi revolusioner yang membuka peluang besar bagi penerbit tiket di seluruh dunia. Ya, juga untukmu."
                 />
             </Head>
-            <AuthProvider>
-                <ExplorerProvider>
-                    <div className="px-4 mx-auto max-w-75r wrap:px-0">
-                        <Component {...pageProps} />
-                    </div>
-                </ExplorerProvider>
-            </AuthProvider>
+            <ExplorerProvider>
+                <div className="px-4 mx-auto max-w-75r wrap:px-0">
+                    <Component {...pageProps} />
+                </div>
+            </ExplorerProvider>
         </>
     );
 }

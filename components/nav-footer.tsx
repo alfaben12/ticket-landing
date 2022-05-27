@@ -30,6 +30,7 @@ function NavFooter() {
                                 text="Documentation"
                             />
                             <NavFooterLink href="/claim" text="Claim" />
+                            <NavFooterLink href="/queue" text="queue" />
                             {/* <NavFooterLink href="/event" text="Event" /> */}
                         </ul>
                     </li>

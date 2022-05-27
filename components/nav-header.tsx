@@ -47,6 +47,7 @@ function NavHeader() {
                     <ul className="flex">
                         <NavHeaderLink href="/claim" text="Claim" />
                         <NavHeaderLink href="/explorer" text="Explorer" />
+                        <NavHeaderLink href="/queue" text="Queue" />
                         <NavHeaderLink href="/#token" text="Token" />
                         <NavHeaderLink
                             href={process.env.NEXT_PUBLIC_DOCS_ENDPOINT}
@@ -75,6 +76,11 @@ function NavHeader() {
                                 <NavHeaderLink
                                     href="/explorer"
                                     text="Explorer"
+                                    isMobile
+                                />
+                                <NavHeaderLink
+                                    href="/queue"
+                                    text="Queue"
                                     isMobile
                                 />
                                 <NavHeaderLink

@@ -12,6 +12,8 @@
         "axios": "^0.26.1",
         "classnames": "^2.3.1",
         "copy-to-clipboard": "^3.3.1",
+        "gridjs": "^5.0.2",
+        "gridjs-react": "^5.0.2",
         "less": "^4.1.2",
         "less-loader": "^10.2.0",
         "moment": "^2.29.3",

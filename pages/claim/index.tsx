@@ -4,6 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import NavFooter from "../../components/nav-footer";
 import { useExplorer } from "../../context/ExplorerContext/Context";
 import { useRouter } from "next/router";
+import moment from "moment";
 
 const ClaimPage = () => {
     const router = useRouter();
@@ -29,7 +30,7 @@ const ClaimPage = () => {
             address,
             email,
             description: note,
-            claimTime: +new Date(),
+            claimTime: moment().unix().toString(),
         };
         claimTicket(body);
     };
