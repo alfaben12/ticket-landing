@@ -9,10 +9,12 @@ import SetForFuture from "../components/set-for-future";
 import Image from "next/image";
 import NavFooter from "../components/nav-footer";
 import NavHeader from "../components/nav-header";
+import ModalNotice from "../components/modal-notice";
 
 const Home: NextPage = () => {
     return (
         <>
+            <ModalNotice />
             <NavHeader />
             <JumboHero />
             <div style={{ borderRadius: "8px", overflow: "hidden" }}>

@@ -5,15 +5,16 @@ import NavFooter from "../../components/nav-footer";
 import { useExplorer } from "../../context/ExplorerContext/Context";
 import { useRouter } from "next/router";
 import moment from "moment";
+import ModalNotice from "../../components/modal-notice";
 
 const ClaimPage = () => {
     const router = useRouter();
     const { claimTicket, claimed, isLoading, resetState } = useExplorer();
-    const [isOpen, setIsOpen] = useState(false);
     const [code, setCode] = useState("");
     const [address, setAddress] = useState("");
     const [email, setEmail] = useState("");
     const [note, setNote] = useState("");
+    const [isOpen, setIsOpen] = useState(false);
     const closeModal = () => {
         setIsOpen(false);
     };
@@ -48,6 +49,7 @@ const ClaimPage = () => {
 
     return (
         <div>
+            <ModalNotice />
             <NavHeader />
             <div className="flex justify-center lg:h-screen">
                 <div
@@ -320,7 +322,7 @@ const ClaimPage = () => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            Kamu dapat melihat code daplikasi
+                                            Kamu dapat melihat code diaplikasi
                                             tempat kamu membeli tiket atau dapat
                                             dilihat ditiket yang sudah kamu
                                             terima.
