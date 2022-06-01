@@ -49,7 +49,6 @@ const ClaimPage = () => {
 
     return (
         <div>
-            <ModalNotice />
             <NavHeader />
             <div className="flex justify-center lg:h-screen">
                 <div

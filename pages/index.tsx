@@ -14,7 +14,7 @@ import ModalNotice from "../components/modal-notice";
 const Home: NextPage = () => {
     return (
         <>
-            <ModalNotice />
+            {/* <ModalNotice /> */}
             <NavHeader />
             <JumboHero />
             <div style={{ borderRadius: "8px", overflow: "hidden" }}>
