@@ -6,10 +6,10 @@ function NavFooter() {
             <li className="lg:col-span-1">
                 <h6 className="mb-3 text-xl font-medium">GET Twin</h6>
                 <p className="text-pir-gray-500">
-                    End-to-end NFT ticket maker.
+                    NFT is a revolutionary form of technology.
                 </p>
                 <p className="text-pir-gray-500">
-                    &copy; 2021 get-twin.com. All rights reserved.
+                    &copy; 2022 get-twin.com. All rights reserved.
                 </p>
             </li>
             <li className="mt-6 lg:mt-0 lg:col-span-2">
@@ -31,6 +31,10 @@ function NavFooter() {
                             />
                             <NavFooterLink href="/claim" text="Claim" />
                             <NavFooterLink href="/queue" text="Queue" />
+                            <NavFooterLink
+                                href="/proposal.html"
+                                text="Proposal"
+                            />
                             {/* <NavFooterLink href="/event" text="Event" /> */}
                         </ul>
                     </li>
